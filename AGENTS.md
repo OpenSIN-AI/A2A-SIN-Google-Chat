@@ -1,35 +1,27 @@
-# Agent: A2A-SIN-Google-Chat
+# A2A-SIN-Google-Chat — AGENTS.md
 
-**Team:** OpenSIN-AI
-**Protocol:** A2A (Agent-to-Agent)
-**Status:** Active
-**Repository:** https://github.com/OpenSIN-AI/A2A-SIN-Google-Chat
+## Purpose
 
-## Capabilities
+Google Chat integration agent for OpenSIN fleet communication.
 
-A2A agent for Google-Chat integration within the OpenSIN ecosystem.
+## Rules
 
-## Communication
+- ALWAYS use opencode CLI for LLM calls
+- ALWAYS follow Google account matrix
+- NEVER expose proprietary backend code
+- ALWAYS log errors to GitLab LogCenter
 
-- **Input:** A2A messages from orchestrator
-- **Output:** A2A messages to other agents
-- **MCP:** Standard OpenSIN MCP servers
+## PARALLEL-EXPLORATION MANDATE (PRIORITY -4.5)
 
-## Security
+Bei grossen Codebases MUESSEN Agenten **5-10 parallele explore + 5-10 librarian-Agenten** starten.
 
-- All operations logged to OpenSIN-Ledger
-- Requires authorization token
-- Guardrails enforced on all inputs/outputs
+## Subagenten-Modelle
 
-## Setup
+| Subagent | Modell |
+|:---|:---|
+| **explore** | `nvidia-nim/stepfun-ai/step-3.5-flash` |
+| **librarian** | `nvidia-nim/stepfun-ai/step-3.5-flash` |
 
-```bash
-git clone https://github.com/OpenSIN-AI/A2A-SIN-Google-Chat.git
-cd A2A-SIN-Google-Chat
-npm install
-npm start
-```
+## Agent Config System v5
 
-## License
-
-MIT
+→ [Full Documentation](https://github.com/OpenSIN-AI/OpenSIN-documentation/blob/main/docs/guide/agent-configuration.md)
