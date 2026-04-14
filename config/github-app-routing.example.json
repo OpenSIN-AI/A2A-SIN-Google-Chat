@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OpenSIN-AI/OpenSIN-documentation/main/schemas/github-app-routing.json",
+  "version": "1.0.0",
+  "githubBot": {
+    "enabled": true,
+    "appSlug": "GOOGLE_CHAT-bot",
+    "botName": "A2A-SIN-Google-Chat Bot",
+    "appIdEnv": "GOOGLE_CHAT_APP_ID",
+    "clientIdEnv": "GOOGLE_CHAT_CLIENT_ID",
+    "privateKeyEnv": "GOOGLE_CHAT_PRIVATE_KEY",
+    "webhookSecretEnv": "GOOGLE_CHAT_WEBHOOK_SECRET"
+  },
+  "routing": {
+    "onIssue": {"handler": "issues.ts", "enabled": true},
+    "onPullRequest": {"handler": "prs.ts", "enabled": true},
+    "onComment": {"handler": "comments.ts", "enabled": true}
+  }
+}
